@@ -1,0 +1,39 @@
+{
+  "name": "@custom-hooks-sets/blank-modal",
+  "version": "1.0.0",
+  "description": "Empty modal for everyone",
+  "main": "dist/index.js",
+  "type": "dist/index.d.ts",
+  "directories": {
+    "example": "example"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/styled-components": "^5.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.0",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devGW/custom-hooks-sets.git"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "hooks",
+    "modal"
+  ],
+  "author": "devgw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devGW/custom-hooks-sets/issues"
+  },
+  "homepage": "https://github.com/devGW/custom-hooks-sets#readme"
+}
