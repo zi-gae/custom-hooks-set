@@ -1,4 +1,4 @@
-# @custom-hooks-sets/blankModal
+# @devgw-react/blankModal
 
 React Hook to open your modal on browser
 
@@ -6,11 +6,11 @@ React Hook to open your modal on browser
 
 #### yarn
 
-`yarn add @custom-hooks-sets/blankModal`
+`yarn add @devgw-react/blankModal`
 
 #### npm
 
-`npm i @custom-hooks-sets/blankModal`
+`npm i @devgw-react/blankModal`
 
 ## Usage
 

@@ -1,5 +1,5 @@
 {
-  "name": "@custom-hooks-sets/blank-modal",
+  "name": "@devgw-react/blank-modal",
   "version": "1.0.0",
   "description": "Empty modal for everyone",
   "main": "dist/index.js",
