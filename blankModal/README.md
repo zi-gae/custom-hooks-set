@@ -21,10 +21,13 @@ import { ModalTemplate, useModalHandler } from "../lib";
 const ModalParent = () => {
   const { isVisible, toggleModalStatus } = useModalHandler();
   return (
+    <>
     <ModalTemplate isVisible={isVisible} toggleModalStatus={toggleModalStatus}>
       <div>HELLOW</div>
-      <button onClick={toggleModalStatus}></button>
+      <button onClick={toggleModalStatus}>Close</button>
     </ModalTemplate>
+    <button onClick={toggleModalStatus}>Open</button>
+    </>
   );
 };
 

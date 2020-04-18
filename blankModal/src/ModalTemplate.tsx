@@ -24,7 +24,7 @@ const Modal = styled.div`
 interface IModalTemplate {
   children: React.ReactNode;
   isVisible: boolean;
-  modalVisibleHandler: () => void;
+  modalVisibleHandler?: () => void;
 }
 
 export const ModalTemplate = ({

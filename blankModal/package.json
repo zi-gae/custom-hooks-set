@@ -1,6 +1,6 @@
 {
   "name": "@devgw-react/blank-modal",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Empty modal for everyone",
   "main": "dist/index.js",
   "type": "dist/index.d.ts",
@@ -16,10 +16,6 @@
     "styled-components": "^5.1.0",
     "typescript": "^3.8.3"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devGW/custom-hooks-sets.git"
@@ -28,7 +24,8 @@
     "react",
     "react-hooks",
     "hooks",
-    "modal"
+    "modal",
+    "typescript"
   ],
   "author": "devgw",
   "license": "MIT",

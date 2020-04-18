@@ -3,7 +3,7 @@ import * as React from "react";
 export const useModalHandler = () => {
   const { useState } = React;
 
-  const [isVisible, setIsVisible] = useState<Boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
   const [position, setPosition] = useState<string>(
     document.body.style.position
   );
