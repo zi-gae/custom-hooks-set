@@ -1,4 +1,4 @@
 export declare const useModalHandler: () => {
-    isVisible: Boolean;
+    isVisible: boolean;
     toggleModalStatus: () => void;
 };

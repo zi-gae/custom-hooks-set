@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import ScrollLock, { TouchScrollable } from "react-scrolllock";
 
 const Container = styled.div``;
 const ModalOverlay = styled.div`
