@@ -40,4 +40,4 @@ export default ModalParent;
 | ------------------- | --------- | ------------------------------ | -------- |
 | children            | ReactNode | Components to be view in modal | yes      |
 | isVisible           | boolean   | modal visible state value      | yes      |
-| modalVisibleHandler | ()=>void  | modal visible handler          | yes      |
+| modalVisibleHandler | ()=>void  | modal isVisible handler        | no       |
