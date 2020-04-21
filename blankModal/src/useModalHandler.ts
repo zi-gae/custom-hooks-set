@@ -4,17 +4,17 @@ export const useModalHandler = () => {
   const { useState } = React;
 
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const [position, setPosition] = useState<string>(
-    document.body.style.position
+  const [overflowY, setoverflowY] = useState<string>(
+    document.body.style.overflowY
   );
 
   const toggleModalStatus = () => {
     if (!isVisible) {
       setIsVisible(true);
-      document.body.style.position = "fixed";
+      document.body.style.overflowY = "hidden";
     } else {
       setIsVisible(false);
-      document.body.style.position = position;
+      document.body.style.position = overflowY;
     }
   };
   return {
