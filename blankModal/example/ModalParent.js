@@ -1,18 +1,22 @@
 import React from "react";
-import { ModalTemplate, useModalHandler } from "../lib";
+import { ModalTemplate, useModalHandler } from "@devgw/blank-modal";
 
 const ModalParent = () => {
-  const { isVisible, toggleModalStatus } = useModalHandler();
+  const {
+    isVisible,
+    handleModalActive,
+    handleModalInactive,
+  } = useModalHandler();
   return (
     <>
       <ModalTemplate
         isVisible={isVisible}
-        toggleModalStatus={toggleModalStatus}
+        handleModalInactive={handleModalInactive}
       >
         <div>HELLOW</div>
-        <button onClick={toggleModalStatus}></button>
+        <button onClick={handleModalInactive}></button>
       </ModalTemplate>
-      <button onClick={toggleModalStatus}>MODAL OPEN</button>
+      <button onClick={handleModalActive}>MODAL OPEN</button>
     </>
   );
 };

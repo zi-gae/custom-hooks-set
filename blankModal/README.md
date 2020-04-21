@@ -16,20 +16,25 @@ React Hook to open your modal on browser
 
 ```js
 import React from "react";
-import { ModalTemplate, useModalHandler } from "../lib";
+import { ModalTemplate, useModalHandler } from "@devgw/blank-modal";
 
 const ModalParent = () => {
-  const { isVisible, toggleModalStatus } = useModalHandler();
+  const {
+    isVisible,
+    handleModalActive,
+    handleModalInactive,
+  } = useModalHandler();
   return (
     <>
       <ModalTemplate
-        isVisible={isVisible}
-        toggleModalStatus={toggleModalStatus}
+        isVisible={isVisible} // modal status
+        handleModalInactive={handleModalInactive} // modal close
       >
+        // create a component for modal here.
         <div>HELLOW</div>
-        <button onClick={toggleModalStatus}>Close</button>
+        <button onClick={handleModalInactive}></button> // modal close
       </ModalTemplate>
-      <button onClick={toggleModalStatus}>Open</button>
+      <button onClick={handleModalActive}>MODAL OPEN</button> // modal open
     </>
   );
 };
@@ -37,10 +42,10 @@ const ModalParent = () => {
 export default ModalParent;
 ```
 
-### Arguments
+### ModalTemplate Arguments
 
 | Argument            | Type      | Description                    | Required |
 | ------------------- | --------- | ------------------------------ | -------- |
 | children            | ReactNode | Components to be view in modal | yes      |
 | isVisible           | boolean   | modal visible state value      | yes      |
-| modalVisibleHandler | ()=>void  | modal isVisible handler        | no       |
+| handleModalInactive | ()=>void  | modal isVisible handler        | no       |

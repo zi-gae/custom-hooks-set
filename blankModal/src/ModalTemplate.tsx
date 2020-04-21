@@ -24,19 +24,19 @@ const Modal = styled.div`
 interface IModalTemplate {
   children: React.ReactNode;
   isVisible: boolean;
-  modalVisibleHandler?: () => void;
+  handleModalInactive?: () => void;
 }
 
 export const ModalTemplate = ({
   children,
   isVisible,
-  modalVisibleHandler,
+  handleModalInactive,
 }: IModalTemplate) => {
   return (
     <Container>
       {isVisible && (
         <>
-          <ModalOverlay onClick={modalVisibleHandler} />
+          <ModalOverlay onClick={handleModalInactive} />
           <Modal>{children}</Modal>
         </>
       )}

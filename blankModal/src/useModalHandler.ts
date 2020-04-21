@@ -8,17 +8,23 @@ export const useModalHandler = () => {
     document.body.style.overflowY
   );
 
-  const toggleModalStatus = () => {
+  const handleModalActive = () => {
     if (!isVisible) {
       setIsVisible(true);
       document.body.style.overflowY = "hidden";
-    } else {
-      setIsVisible(false);
-      document.body.style.position = overflowY;
     }
   };
+
+  const handleModalInactive = () => {
+    if (isVisible) {
+      setIsVisible(false);
+      document.body.style.overflowY = overflowY;
+    }
+  };
+
   return {
     isVisible,
-    toggleModalStatus,
+    handleModalActive,
+    handleModalInactive,
   };
 };
