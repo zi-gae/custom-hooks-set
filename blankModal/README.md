@@ -1,4 +1,4 @@
-# @devgw-react/blankModal
+# @devgw-react/blank-modal
 
 React Hook to open your modal on browser
 
@@ -6,11 +6,11 @@ React Hook to open your modal on browser
 
 #### yarn
 
-`yarn add @devgw-react/blankModal`
+`yarn add @devgw-react/blank-modal`
 
 #### npm
 
-`npm i @devgw-react/blankModal`
+`npm i @devgw-react/blank-modal`
 
 ## Usage
 
@@ -22,11 +22,14 @@ const ModalParent = () => {
   const { isVisible, toggleModalStatus } = useModalHandler();
   return (
     <>
-    <ModalTemplate isVisible={isVisible} toggleModalStatus={toggleModalStatus}>
-      <div>HELLOW</div>
-      <button onClick={toggleModalStatus}>Close</button>
-    </ModalTemplate>
-    <button onClick={toggleModalStatus}>Open</button>
+      <ModalTemplate
+        isVisible={isVisible}
+        toggleModalStatus={toggleModalStatus}
+      >
+        <div>HELLOW</div>
+        <button onClick={toggleModalStatus}>Close</button>
+      </ModalTemplate>
+      <button onClick={toggleModalStatus}>Open</button>
     </>
   );
 };
