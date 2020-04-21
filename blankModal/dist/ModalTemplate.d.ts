@@ -1,8 +1,12 @@
 import * as React from "react";
-interface IModalTemplate {
+interface IModal {
+    bgColor?: string;
+    borderRadius?: string;
+}
+interface IModalTemplate extends IModal {
     children: React.ReactNode;
     isVisible: boolean;
     handleModalInactive?: () => void;
 }
-export declare const ModalTemplate: ({ children, isVisible, handleModalInactive, }: IModalTemplate) => JSX.Element;
+export declare const ModalTemplate: ({ children, isVisible, handleModalInactive, bgColor, borderRadius, }: IModalTemplate) => JSX.Element;
 export {};
