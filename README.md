@@ -51,4 +51,6 @@ export default ModalParent;
 | ------------------- | --------- | ------------------------------ | -------- |
 | children            | ReactNode | Components to be view in modal | yes      |
 | isVisible           | boolean   | modal visible state value      | yes      |
-| modalVisibleHandler | ()=>void  | modal isVisible handler        | no       |
+| handleModalInactive | ()=>void  | modal isVisible handler        | no       |
+| borderRadius        | string    | modal border radius value      | no       |
+| bgColor             | string    | modal background color value   | no       |

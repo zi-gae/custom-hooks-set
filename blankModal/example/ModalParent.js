@@ -12,6 +12,8 @@ const ModalParent = () => {
       <ModalTemplate
         isVisible={isVisible}
         handleModalInactive={handleModalInactive}
+        bgColor="#e6e6e6"
+        borderRaidus="5px"
       >
         <div>HELLOW</div>
         <button onClick={handleModalInactive}></button>
