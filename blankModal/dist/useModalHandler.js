@@ -19,16 +19,12 @@ exports.useModalHandler = function () {
         document.body.style.overflowY = scrollOptions.overflowY;
     };
     var handleModalActive = function () {
-        if (!isVisible) {
-            setIsVisible(true);
-            handleBodyScroll(scrollLockOptions);
-        }
+        setIsVisible(true);
+        handleBodyScroll(scrollLockOptions);
     };
     var handleModalInactive = function () {
-        if (isVisible) {
-            setIsVisible(false);
-            handleBodyScroll(currentScrollOptions);
-        }
+        setIsVisible(false);
+        handleBodyScroll(currentScrollOptions);
     };
     return {
         isVisible: isVisible,
