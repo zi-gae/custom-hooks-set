@@ -31,17 +31,13 @@ export const useModalHandler = () => {
   };
 
   const handleModalActive = () => {
-    if (!isVisible) {
-      setIsVisible(true);
-      handleBodyScroll(scrollLockOptions);
-    }
+    setIsVisible(true);
+    handleBodyScroll(scrollLockOptions);
   };
 
   const handleModalInactive = () => {
-    if (isVisible) {
-      setIsVisible(false);
-      handleBodyScroll(currentScrollOptions);
-    }
+    setIsVisible(false);
+    handleBodyScroll(currentScrollOptions);
   };
 
   return {
