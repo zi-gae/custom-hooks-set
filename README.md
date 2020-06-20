@@ -6,25 +6,27 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/devGW/custom-hooks-sets?color=success)
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/devGW/custom-hooks-sets?color=critical)
 
-# @devgw-react/blank-modal
+# ui-custom-hooks
 
 React Hook to open your modal on browser
+
+React Hook to outside click for dropdown and tooltip
 
 ## Installation
 
 #### yarn
 
-`yarn add @devgw-react/blank-modal`
+`yarn add ui-custom-hooks`
 
 #### npm
 
-`npm i @devgw-react/blank-modal`
+`npm i ui-custom-hooks`
 
-## Usage
+## Modal Usage
 
 ```js
 import React from "react";
-import { ModalTemplate, useModalHandler } from "../lib";
+import { ModalTemplate, useModalHandler } from "ui-custom-hooks/blankModal";
 
 const ModalParent = () => {
   const { isVisible, toggleModalStatus } = useModalHandler();
@@ -52,5 +54,41 @@ export default ModalParent;
 | children            | ReactNode | Components to be view in modal | yes      |
 | isVisible           | boolean   | modal visible state value      | yes      |
 | handleModalInactive | ()=>void  | modal isVisible handler        | no       |
+| handleModalActive   | ()=>void  | modal isVisible handler        | no       |
 | borderRadius        | string    | modal border radius value      | no       |
 | bgColor             | string    | modal background color value   | no       |
+
+---
+
+## outsideClick(Tooltop, Dropdown...) Usage
+
+```js
+import React from "react";
+import { render } from "react-dom";
+import { ref, isComponentVisible } from "@devgw-react/outside-click";
+
+const OutsideAlerter = (props) => {
+  const wrapperRef = useRef(null);
+  if(isComponentVisible) {
+    alert("outside Click!!!")
+  }
+
+  return <div ref={wrapperRef}>{props.children}</div>;
+}
+
+const App = () => {
+  <OutsideAlerter ref={ref}>
+    <button>Click outside me!</button>
+  </OutsideAlerter>
+);
+
+render(<App />, document.getElementById("root"));
+```
+
+### `useOutsideClickHandler` Arguments
+
+| Argument              | Type                            | Description                    | Required |
+| --------------------- | ------------------------------- | ------------------------------ | -------- |
+| ref                   | `ref` of the standard component |                                | -        |
+| isComponentVisible    | boolean                         | Components visible state value | -        |
+| setIsComponentVisible | ()=>void                        | Components isVisible handler   | -        |

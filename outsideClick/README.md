@@ -1,53 +1,46 @@
 # @devgw-react/blank-modal
 
-React Hook to open your modal on browser
+React Hook to outside click for dropdown and tooltip ...
 
 ## Installation
 
 #### yarn
 
-`yarn add @devgw-react/blank-modal`
+`yarn add @devgw-react/outside-click`
 
 #### npm
 
-`npm i @devgw-react/blank-modal`
+`npm i @devgw-react/outside-click`
 
 ## Usage
 
 ```js
 import React from "react";
-import { ModalTemplate, useModalHandler } from "@devgw/blank-modal";
+import { render } from "react-dom";
+import { ref, isComponentVisible } from "@devgw-react/outside-click";
 
-const ModalParent = () => {
-  const {
-    isVisible,
-    handleModalActive,
-    handleModalInactive,
-  } = useModalHandler();
-  return (
-    <>
-      <ModalTemplate
-        isVisible={isVisible} // modal status
-        handleModalInactive={handleModalInactive} // modal close
-      >
-        // create a component for modal here.
-        <div>HELLOW</div>
-        <button onClick={handleModalInactive}></button> // modal close
-      </ModalTemplate>
-      <button onClick={handleModalActive}>MODAL OPEN</button> // modal open
-    </>
-  );
-};
+function OutsideAlerter(props) {
+  const wrapperRef = useRef(null);
+  if(isComponentVisible) {
+    alert("outside Click!!!")
+  }
 
-export default ModalParent;
+  return <div ref={wrapperRef}>{props.children}</div>;
+}
+
+function App() {
+  <OutsideAlerter ref={ref}>
+    <button>Click outside me!</button>
+  </OutsideAlerter>
+);
+
+render(<App />, document.getElementById("root"));
 ```
 
-### ModalTemplate Arguments
+### `useOutsideClickHandler` Arguments
 
-| Argument            | Type      | Description                    | Required |
-| ------------------- | --------- | ------------------------------ | -------- |
-| children            | ReactNode | Components to be view in modal | yes      |
-| isVisible           | boolean   | modal visible state value      | yes      |
-| handleModalInactive | ()=>void  | modal isVisible handler        | no       |
-| borderRadius        | string    | modal border radius value      | no       |
-| bgColor             | string    | modal background color value   | no       |
+| Argument              | Type                            | Description                    | Required |
+| --------------------- | ------------------------------- | ------------------------------ | -------- |
+| ref                   | `ref` of the standard component |                                | -        |
+| isComponentVisible    | boolean                         | Components visible state value | -        |
+| setIsComponentVisible | ()=>void                        | Components isVisible handler   | -        |
