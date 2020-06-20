@@ -1,7 +1,7 @@
 {
-  "name": "@devgw-react/blank-modal",
-  "version": "1.1.6",
-  "description": "Empty modal for everyone",
+  "name": "@devgw-react/outside-click",
+  "version": "1.0.2",
+  "description": "outside click handler",
   "main": "dist/index.js",
   "type": "dist/index.d.ts",
   "directories": {
@@ -10,10 +10,8 @@
   "peerDependencies": {
     "@types/react": "16.9.25",
     "@types/react-dom": "16.9.5",
-    "@types/styled-components": "^5.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "styled-components": "^5.1.0",
     "typescript": "^3.8.3"
   },
   "repository": {
@@ -25,7 +23,13 @@
     "react-hooks",
     "hooks",
     "modal",
-    "typescript"
+    "typescript",
+    "ui",
+    "react-ui",
+    "react-click-handler",
+    "outside-click-handler",
+    "tooltip",
+    "dropdown"
   ],
   "author": "devgw",
   "license": "MIT",

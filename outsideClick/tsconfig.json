@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["DOM", "ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020"],
+    "types": ["react"],
+    "jsx": "react",
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "allowJs": true,
+    "declaration": true,
+    "esModuleInterop": true
+  },
+
+  "include": ["src"],
+  "exclude": ["./node_modules/**/*"]
+}
