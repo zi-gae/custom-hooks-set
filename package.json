@@ -1,6 +1,6 @@
 {
   "name": "ui-custom-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this package set of custom-hooks",
   "main": "index.js",
   "scripts": {
