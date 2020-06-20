@@ -1,0 +1,40 @@
+{
+  "name": "@devgw-react/outside-click",
+  "version": "1.0.0",
+  "description": "outside click handler",
+  "main": "dist/index.js",
+  "type": "dist/index.d.ts",
+  "directories": {
+    "example": "example"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typescript": "^3.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devGW/custom-hooks-sets.git"
+  },
+  "keywords": [
+    "react",
+    "react-hooks",
+    "hooks",
+    "modal",
+    "typescript",
+    "ui",
+    "react-ui",
+    "react-click-handler",
+    "outside-click-handler",
+    "tooltip",
+    "dropdown"
+  ],
+  "author": "devgw",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/devGW/custom-hooks-sets/issues"
+  },
+  "homepage": "https://github.com/devGW/custom-hooks-sets#readme"
+}
