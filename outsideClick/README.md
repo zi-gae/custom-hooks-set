@@ -1,4 +1,4 @@
-# @devgw-react/blank-modal
+# @devgw-react/outside-click
 
 React Hook to outside click for dropdown and tooltip ...
 

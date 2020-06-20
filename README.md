@@ -65,7 +65,7 @@ export default ModalParent;
 ```js
 import React from "react";
 import { render } from "react-dom";
-import { ref, isComponentVisible } from "@devgw-react/outside-click";
+import { ref, isComponentVisible } from "ui-custom-hooks/outsideClick";
 
 const OutsideAlerter = (props) => {
   const wrapperRef = useRef(null);
